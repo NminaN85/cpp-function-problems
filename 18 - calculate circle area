@@ -1,0 +1,26 @@
+#include <iostream>
+#include<string>
+#include<cmath>
+using namespace std;
+
+float ReadNumbers( ) {
+    float R;
+    cout << "Please enter R :";
+    cin >> R;
+    return R;
+}
+float CalculateCircleleArea( float R) {
+    const float pi = 3.14;
+
+    return pi * pow(R, 2);
+}
+void PrintArea(float Area) {
+    cout << "Triangle Area is : " << Area << endl;
+
+}
+
+int main()
+{   
+    PrintArea(CalculateCircleleArea(ReadNumbers()));
+    return 0;
+}
