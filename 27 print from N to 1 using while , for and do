@@ -1,0 +1,55 @@
+#include <iostream>   
+#include <string>     
+
+using namespace std;  
+
+
+int ReadNumberN()
+{
+    int N;
+    cout << "Please enter Number N ? " << endl;
+    cin >> N;
+    return N;
+}
+
+void PrintNUsingFor(int N) {
+    cout << "from For  " << endl;
+   for (int i = N; i > 0; i--) {
+       cout << i << endl;
+      
+   }
+   cout << "----------------------------"<<endl;
+}
+void PrintNUsingWhile(int N) {
+    cout << "From While " << endl;
+     int counter = N;
+    while (counter > 0  ){
+        cout << counter << endl;
+        counter--;
+    }
+    
+}
+
+void PrintNUsingDo(int N) {
+
+    int counter = N;
+    cout << " From Do :" << endl;
+    do {
+        cout << counter << endl;
+        counter--;
+    } while (counter >0);
+}
+
+
+
+int main()
+{ 
+    int N = ReadNumberN();
+    
+    PrintNUsingFor(N);
+    PrintNUsingWhile(N);
+    PrintNUsingDo(N);
+
+
+    return 0;
+}
