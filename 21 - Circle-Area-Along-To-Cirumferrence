@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+float ReadCirumferrence() {
+    float L;
+    cout << "Please enter  Cirumferrence : ";
+    cin >> L;
+    return L;
+}
+
+float CircleAreaAlongToCirumferrence(float L) {
+	const float pi = 3.14159f;
+    float Area;
+    Area = pow(L, 2) / (4 * pi);
+    return Area;
+}
+void PrintArea(float Area) {
+	cout << "The area of the circle inscribed in the square is: " << Area << endl;
+   
+}
+
+int main() {
+
+    PrintArea(CircleAreaAlongToCirumferrence(ReadCirumferrence()));
+
+    return 0;
+}
