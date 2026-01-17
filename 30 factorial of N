@@ -1,0 +1,40 @@
+#include <iostream>   
+#include <string>     
+
+using namespace std;  
+
+int ReadPossitiveNumberN(string Message)
+{
+    int Number; 
+
+    do {
+        cout << Message << endl;
+        cin >> Number; 
+    } while (Number <= 0);
+    return Number;
+}
+int FactorialOfNumber(int Number) {
+   
+    int Factorial = 1;
+
+    for (int counter = 1; counter <= Number;counter++) {
+        Factorial *= counter;
+
+    }
+
+    return Factorial;
+}
+void PrintFactorialOfN(int Factorial) {
+    cout << Factorial << endl;
+}
+
+
+
+int main()
+{
+    
+    PrintFactorialOfN(FactorialOfNumber(ReadPossitiveNumberN("Please enter a possitive Number ")));
+
+
+    return 0;
+}
