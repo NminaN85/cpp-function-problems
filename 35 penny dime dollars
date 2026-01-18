@@ -1,0 +1,48 @@
+#include <iostream>
+using namespace std;
+
+
+struct stMoney {
+    float Penny;
+    float Nickel;
+    float Dime;
+    float Quarter;
+    float Dollar;
+};
+ 
+stMoney GetAmounts() {
+    stMoney Info;
+
+    cout << "How many Penny ? ";
+    cin >> Info.Penny;
+    cout << "How many Nickel ? ";
+    cin >> Info.Nickel;
+    cout << "How many Dime ? ";
+    cin >> Info.Dime;
+    cout << "How many Quarter ? ";
+    cin >> Info.Quarter;
+    cout << "How many Dollar ? ";
+    cin >> Info.Dollar;
+
+    return Info;
+}
+float CalculateTotalAmountInPenny(stMoney Info) {
+
+    return  (Info.Dollar * 100) + (Info.Quarter * 25) + (Info.Dime * 10) + (Info.Nickel * 5) + (Info.Penny);
+}
+float CalculateTotalAmountInDollars(stMoney Info) {
+    
+    return (Info.Dollar / 1) + (Info.Quarter / 4) + (Info.Dime / 10) + (Info.Nickel / 20) + (Info.Penny /100);
+     
+}
+
+int main() {
+    stMoney Info = GetAmounts();
+
+   cout<<"Total Dollars =  " << CalculateTotalAmountInDollars(Info)<<endl;
+   cout << "Total Pinny =  " << CalculateTotalAmountInPenny(Info);
+
+
+
+    return 0;
+}
