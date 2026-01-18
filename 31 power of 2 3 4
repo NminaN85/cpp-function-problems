@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int ReadNumber() {
+    int Number;
+    cout << "Enter First Number  : ";
+    cin >> Number;
+    return Number;
+
+}
+void CalculatePowerOfNmbers(int Number) {
+     int PowerOf2 = Number * Number;
+     int PowerOf3 = Number * Number * Number;
+      int PowerOf4 = Number * Number * Number * Number;
+      cout << Number << " power of 2 is " << PowerOf2 << endl;
+      cout << Number <<" power of 3 is " << PowerOf3 << endl;
+      cout << Number <<" power of 4 is " << PowerOf4 << endl;
+
+}
+
+
+int main() {
+
+
+    CalculatePowerOfNmbers(ReadNumber());
+
+    return 0;
+}
