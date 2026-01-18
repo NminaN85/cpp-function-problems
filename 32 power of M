@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+void ReadNumber(int  &M, int &Number) {
+   
+    cout << "Enter  Number  : ";
+    cin >> Number ;
+	cout << "Which power do you want to calculate? ";
+    cin >> M;
+
+}
+int CalculatePowerOfM(int Number , int M) {
+    int Result = pow(Number, M);
+    return Result;
+}
+void PrintNumberPowM(int Result) {
+	cout << "The result is: " << Result << endl;
+}
+
+int main() {
+
+    int Number, M;
+    ReadNumber(Number, M);
+
+    PrintNumberPowM(CalculatePowerOfM(Number , M));
+
+    return 0;
+}
