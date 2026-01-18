@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+
+
+float GetToTalSale() {
+    float ToTalSale;
+   
+        cout << "Please enter ToTal Sale ";
+            cin >> ToTalSale;
+    
+	return  ToTalSale;
+}
+float GetComissionPersantage(float ToTalSale) {
+    if (ToTalSale > 1000000) return 0.01 ;
+    else if (ToTalSale > 500000) return 0.02;
+    else if (ToTalSale > 100000) return 0.03;
+    else if (ToTalSale > 50000) return 0.05;
+    else return 0;
+}
+
+float CalculateCommision(float ToTalSale) {
+
+    return GetComissionPersantage(ToTalSale) * ToTalSale;
+}
+ 
+int main() {
+
+
+    float ToTalSale = GetToTalSale();
+    cout << "Your Commission Percentage is : " << GetComissionPersantage(ToTalSale) << endl;
+    cout << "Your Amount of commission is : " << CalculateCommision(ToTalSale);
+   
+
+    return 0;
+}
